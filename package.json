@@ -1,0 +1,61 @@
+{
+  "name": "pgshims",
+  "version": "0.4.0",
+  "description": "",
+  "main": "index.js",
+  "author": "KhulnaSoft Lab",
+  "license": "MIT",
+  "dependencies": {
+    "assert": "file:shims/assert",
+    "buffer": "^6.0.3",
+    "crypto": "file:shims/crypto",
+    "dns": "file:shims/dns",
+    "events": "^3.3.0",
+    "fs": "file:shims/fs",
+    "net": "file:shims/net",
+    "npm-run-all": "^4.1.5",
+    "path": "file:shims/path",
+    "pg": "8.8.0",
+    "pg-native": "file:shims/pg-native",
+    "serve": "^14.1.2",
+    "stream": "file:shims/stream",
+    "string_decoder": "file:shims/string_decoder",
+    "tls": "file:shims/tls",
+    "undici": "^6.0.1",
+    "url": "file:shims/url",
+    "util": "file:shims/util",
+    "ws": "^8.12.1"
+  },
+  "overrides": {
+    "pg-connection-string": "2.5.0"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "export": "npm run check && ./export.sh",
+    "build": "./build.sh",
+    "buildDebug": "./build.sh debug",
+    "watch": "./build.sh watch",
+    "watchDebug": "./build.sh watch debug",
+    "serve": "serve -p 7070 --no-clipboard",
+    "browser": "npm-run-all --parallel --race watch serve",
+    "browserDebug": "npm-run-all --parallel --race watchDebug serve",
+    "launch": "DOTENV_CONFIG_PATH=.dev.vars node -r dotenv/config --no-warnings dist/node/index.mjs",
+    "node": "npm run build && npm run launch",
+    "nodeDebug": "npm run buildDebug && npm run launch",
+    "bun": "npm run build && bun dist/node/index.mjs",
+    "cfDev": "npm run build && wrangler dev",
+    "cfDeploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230115.0",
+    "@types/events": "^3.0.0",
+    "@types/pg": "^8.6.5",
+    "@types/ws": "^8.5.4",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.21.1",
+    "fast-equals": "^5.0.1",
+    "subtls": "^0.3.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.1"
+  }
+}
