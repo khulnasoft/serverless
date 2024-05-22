@@ -65,28 +65,28 @@ cp LICENSE README.md dist/jsr/
 # WITHOUT (see `xe`, `pe`):
 
 # Uncaught:
-# xe [NeonDbError]: db error: ERROR: function xnow() does not exist
+# xe [KhulnasoftDbError]: db error: ERROR: function xnow() does not exist
 # HINT: No function matches the given name and argument types. You might need to add explicit type casts.
 
 # Caused by:
 #     ERROR: function xnow() does not exist
 #     HINT: No function matches the given name and argument types. You might need to add explicit type casts.
 #     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-#     at pe (/Users/george/Development/neon/pgshims/dist/npm/index.js:1459:56) {
+#     at pe (/Users/george/Development/khulnasoft/pgshims/dist/npm/index.js:1459:56) {
 #   code: '42883',
 #   sourceError: undefined
 # }
 
 # WITH:
 
-# Uncaught NeonDbError: db error: ERROR: function xnow() does not exist
+# Uncaught KhulnasoftDbError: db error: ERROR: function xnow() does not exist
 # HINT: No function matches the given name and argument types. You might need to add explicit type casts.
 
 # Caused by:
 #     ERROR: function xnow() does not exist
 #     HINT: No function matches the given name and argument types. You might need to add explicit type casts.
 #     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-#     at execute (/Users/george/Development/neon/pgshims/dist/npm/index.js:1539:48) {
+#     at execute (/Users/george/Development/khulnasoft/pgshims/dist/npm/index.js:1539:48) {
 #   code: '42883',
 #   sourceError: undefined
 # }

@@ -3,7 +3,7 @@
   "version": "0.4.0",
   "description": "",
   "main": "index.js",
-  "author": "KhulnaSoft Lab",
+  "author": "KhulnaSoft Ltd",
   "license": "MIT",
   "dependencies": {
     "assert": "file:shims/assert",
