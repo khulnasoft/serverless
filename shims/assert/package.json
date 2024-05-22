@@ -1,0 +1,9 @@
+{
+  "name": "assert",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "author": "KhulnaSoft Ltd",
+  "license": "ISC"
+}
